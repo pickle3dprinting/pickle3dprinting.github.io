@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Site title: change this to whatever you name the site -->
+  <title>Pickle 3D Printing - 3D Print Gallery</title>
+  <meta name="description" content="A gallery of 3D prints we designed and printed at home." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <span class="logo"><img class="logo-mark" src="assets/logo-mark.png" alt="" />Pickle 3D Printing</span>
+      <nav>
+        <a href="#gallery">Products</a>
+        <a href="#colors">Colors</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <img class="hero-logo" src="assets/logo-hero.png" alt="Hand-drawn Pickle 3D Printing logo: a pickle lifting filament rolls" />
+      <h1>Things we imagined,<br />then printed.</h1>
+      <p>A small shop of 3D prints designed and made at home. Click any piece to see it up close.</p>
+    </div>
+  </section>
+
+  <main id="gallery" class="wrap">
+    <!-- The gallery grid is built automatically from data.js. Add prints there. -->
+    <img id="lineup-img" class="lineup-img" src="" alt="" />
+      <div id="print-grid" class="grid"></div>
+  </main>
+
+  <section id="colors" class="colors">
+    <div class="wrap">
+      <h2>Pick your color</h2>
+      <p>Every product can be printed in any of these filaments. Tell us the color name when you order.</p>
+      <img id="palette-img" class="palette-img" src="" alt="" />
+      <div id="color-list" class="color-list"></div>
+    </div>
+  </section>
+
+  <section id="order" class="order">
+    <div class="wrap">
+      <h2>How to order</h2>
+      <p>
+        Email <a data-order-email href=""></a> with the product you want,
+        the name to put on it, and your color. We will print it and get back to you.
+      </p>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="wrap">
+      <h2>About</h2>
+      <p>
+        This is our home 3D printing studio. We design pieces, slice them, and print
+        them layer by layer. Every print here started as an idea and a spool of filament. Proudly operating Bambu Lab printers since 2025.
+      </p>
+      <ul class="facts">
+        <li><strong>Printer:</strong> Bambu Lab</li>
+        <li><strong>Filament:</strong> Bambu Lab PLA Basic, PLA Matte, and PLA Wood</li>
+        <li><strong>Orders:</strong> pickle3Dprinting@gmail.com</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Made at home, one layer at a time.</p>
+      <p class="order-note">Want one? Email <strong><a data-order-email href=""></a></strong> and we will print it for you.</p>
+    </div>
+  </footer>
+
+  <!-- Lightbox: shows the big photo when a print is clicked -->
+  <div id="lightbox" class="lightbox" hidden>
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <figure>
+      <img id="lightbox-img" src="" alt="" />
+      <figcaption>
+        <strong id="lightbox-title"></strong>
+        <span id="lightbox-detail"></span>
+        <span id="lightbox-price" class="price"></span>
+      </figcaption>
+    </figure>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
